@@ -12,16 +12,22 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import HeaderComponent from 'components/Header/Loadable';
+import NavComponent from 'components/Leftnav/Loadable';
 
 import GlobalStyle from '../../global-styles';
 
 export default function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <HeaderComponent />
+      <div className="d-flex">
+        <NavComponent />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
       <GlobalStyle />
     </div>
   );
