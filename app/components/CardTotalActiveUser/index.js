@@ -50,7 +50,7 @@ function CardTotalActiveUser() {
               className="text-secondary"
               style={{ border: '0' }}
             >
-              ><option value="7">Last 7 days</option>
+              <option value="7">Last 7 days</option>
               <option value="14">Last 14 days</option>
               <option value="30">Last 30 days</option>
             </select>
